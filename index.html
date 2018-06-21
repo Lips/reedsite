@@ -60,32 +60,15 @@ The patterns are then photographed and printed on fabric that is made into scarv
    		<div class="col-twelve">
 
    				<div class="brick folio-item">
-	               <div class="item-wrap animate-this" data-src="images/6-paintings-4x6-key.jpg" data-sub-html="#01" >
-	                  <a href="#" class="overlay" id=areas>
-				<img id=img_ID src="images/couch.jpg" alt="key" usemap="#imgmap">
-				  <map id=map_ID name="imgmap">
+	               <div class="item-wrap animate-this" data-src="images/6-paintings-4x6-key.jpg" data-sub-html="#01" style='width:100%'>
+	                  <a href=# class="overlay">
+				<img id=img_ID src="images/couch.jpg" alt="key" usemap="#map">
+				<map id=map_ID name="map">
                     			<area id=area1 shape="rect" coords="207,53,412,374" href="images/rh1 wall art original w detail 5x6.jpg">
                      			<area id=area2 shape="rect" coords="472,53,693,374" href="images/lz wall art original w detail 5x6.jpg">
                     			<area id=area3 shape="rect" coords="768,53,972,374" href="images/rh2 wall art original w detail 5x6.jpg">
-                    			<!-- <area shape="rect" coords="37,882,244,1106" onclick="alert('test')">
-                    			<area shape="rect" coords="317,882,526,1106" >
-                    			<area shape="rect" coords="597,882,815,1106" >
-                    			<area shape="rect" coords="833,882,1092,1106" >
-                    			<area shape="rect" coords="37,1159,244,1385" >
-                    			<area shape="rect" coords="317,1159,526,1385" >
-                    			<area shape="rect" coords="597,1159,815,1385" >
-                    			<area shape="rect" coords="833,1159,1092,1385" >-->
                 		</map>
-				  <!--
-	                     <div class="item-text">
-	                     	<span class="folio-types">
-		     					      Tea as process.
-		     					   </span>
-		     					   <h3 class="folio-title">Scarves</h3>
-		     					</div>
-	                  </a>
-	                  <a href="https://www.teascarf.com/" class='details-link' title="details">
-	                  	<i class="icon-link"></i>
+
 	                  </a>
 -->                    
 	               </div> <!-- end item-wrap -->
@@ -99,7 +82,12 @@ The patterns are then photographed and printed on fabric that is made into scarv
    <div id="preloader">
     	<div id="loader"></div>
    </div>
-					<script type='text/javascript'>
+
+   <!-- Java Script
+   ================================================== -->
+   <script src="js/jquery-2.1.3.min.js"></script>
+   <script src="js/plugins.js"></script>
+   <script src="js/main.js"></script>
 <script type='text/javascript'>
 window.onload = function () {
     var ImageMap = function (map, img) {
@@ -108,15 +96,15 @@ window.onload = function () {
                 len = areas.length,
                 coords = [],
                 previousWidth = 1130,
-                previousWindowWidth=0;
+		previousWindowWidth=0;
             for (n = 0; n < len; n++) {
                 coords[n] = areas[n].coords.split(',');
             }
-            var coords2=coords;
+	    var coords2=coords;
             this.resize = function () {
-                if(previousWindowWidth==img.offsetWidth)return;
+		if(previousWindowWidth==img.offsetWidth)return;
 //alert(previousWindowWidth+" "+img.offsetWidth);
-                previousWindowWidth=img.offsetWidth;
+		previousWindowWidth=img.offsetWidth;
                 var n, m, clen,
                     x = img.offsetWidth / previousWidth;
                 for (n = 0; n < len; n++) {
@@ -135,12 +123,6 @@ window.onload = function () {
     return;
 }
 </script>
-					</script>
-   <!-- Java Script
-   ================================================== -->
-   <script src="js/jquery-2.1.3.min.js"></script>
-   <script src="js/plugins.js"></script>
-   <script src="js/main.js"></script>
 
 </body>
 
